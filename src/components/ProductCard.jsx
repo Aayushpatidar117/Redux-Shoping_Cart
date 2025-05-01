@@ -78,9 +78,7 @@ const ProductCard = ({ product }) => {
             onClick={() => {
               dispatch(removeToCart(product));
               toast.dismiss();
-              toast.info("Item Removed Sucesfully", {
-                toastId: "cart-action",
-              });
+              toast.success("Item Removed Sucesfully");
             }}
             sx={{
               fontSize: "0.7rem",
@@ -105,9 +103,7 @@ const ProductCard = ({ product }) => {
             onClick={() => {
               dispatch(addToCart(product));
               toast.dismiss();
-              toast.success("Item Added Sucesfully", {
-                toastId: "cart-action",
-              });
+              toast.success("Item Added Sucesfully");
             }}
             sx={{
               fontSize: "0.7rem",

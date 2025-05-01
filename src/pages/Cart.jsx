@@ -41,16 +41,18 @@ const Cart = () => {
           <AddedProductCard key={product.id} product={product} />
         ))}
       </div>
-      <div className="w-[50%] flex flex-col gap-[25rem] p-[2rem]">
-        <div>
-          <p className="text-green-900 text-lg font-bold">Your Card </p>
+      <div className="w-[100%] gap-[2rem] lg:w-[50%] flex flex-col lg:gap-[25rem] p-[2rem]">
+        <div className="flex justify-center lg:items-start items-center flex-col">
+          <p className="text-green-900 text-2xl lg:text-lg font-bold">
+            Your Card{" "}
+          </p>
           <h1 className="text-green-700 text-5xl font-bold">Summary</h1>
           <p className="font-bold text-xl text-slate-800">
             Total Items: {itemCart.length}
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-start gap-4">
+        <div className="flex flex-col justify-center items-start gap-4 w-full px-4 sm:px-8 md:w-[400px] mx-auto">
           <p className="text-lg font-bold text-slate-700">
             Total Amount: $<span>{totalAmountCalculator().toFixed(2)}</span>
           </p>
@@ -59,9 +61,12 @@ const Cart = () => {
               bgcolor: "green",
               color: "white",
               fontWeight: "bold",
-              fontSize: "1rem",
+              fontSize: {
+                xs: "0.8rem", // phone
+                md: "1rem", // laptop and up
+              },
               padding: "9px",
-              width: "70%",
+              width: "100%",
             }}
           >
             Check Out Now

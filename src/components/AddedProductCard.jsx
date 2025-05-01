@@ -8,11 +8,11 @@ const AddedProductCard = ({ product }) => {
   const dispatch = useDispatch();
   return (
     <div>
-      <div className=" w-[100%] flex justify-center items-center gap-[2rem] m-[1rem]">
-        <div className="w-[40%]">
+      <div className=" w-[100%] flex flex-col lg:flex-row justify-center items-center gap-[2rem] m-[1rem]">
+        <div className="w-[100%] lg:w-[40%]">
           <img src={product.image} />
         </div>
-        <div className="w-[60%] flex flex-col justify-center items-start gap-[1rem]">
+        <div className=" w-[100%] lg:w-[60%] flex flex-col justify-center items-start gap-[1rem]">
           <h1 className="text-xl font-bold">{product.title}</h1>
           <p className="text-md font-semibold">{product.description}</p>
           <div className="flex justify-between items-center w-full ">

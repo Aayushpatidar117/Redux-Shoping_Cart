@@ -32,7 +32,7 @@ const Cart = () => {
     </div>
   ) : (
     <div
-      className="w-[100%] mx-auto flex flex-col lg:flex-row justify-center items-start
+      className="w-[100%] mx-auto flex flex-col lg:flex-row lg:items-start  justify-center items-center
        gap-[.2rem] mt-[7rem] mb-[2rem] "
     >
       <ToastContainer position="top-center" />
